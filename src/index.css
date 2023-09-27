@@ -16,9 +16,8 @@
 }
 
 body {
-  display: flex;
-  max-width: 90%;
   min-height: 100vh;
+  margin: 0 2rem 0 2rem;
 }
 
 h1 {
@@ -83,21 +82,30 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin-top: 0.5rem;
-  border-radius: 4px;
+  margin-top: 0.5rem;  
   border: 1px solid white;
+  border-radius: 4px;
   transition: opacity 5s ease-in-out;
 }
 
 .Details {
   flex: 1;
   margin: 4rem 0 0 2rem;
+  border: 1px solid rgb(83, 255, 218);
+  border-radius: 6px;
+  padding: 10px;
 }
 .Details p {
   margin-bottom: 8px;
 }
-.label {
+span {
   font-weight: bold;
   margin-right: 0.5rem;
 }
+.Explanation {
+  margin: 0 10px 0 10px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 
