@@ -13,6 +13,15 @@ function Rover(props) {
         <p>
           <span className="label">Fecha:</span> {props.date}
         </p>
+        <p>
+          <span className="label">Nombre:</span> {props.name}
+        </p>
+        <p>
+          <span className="label">Fecha de aterrizaje:</span> {props.landing}
+        </p>
+        <p>
+          <span className="label">Estado:</span> {props.status}
+        </p>
       </div>
     </div>
   );
