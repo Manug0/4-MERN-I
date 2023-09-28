@@ -107,19 +107,20 @@ function App() {
             copyright={apodData.copyright}
             explanation={apodData.explanation}
           />
-        ) : api === "option2" && roverData && roverData.photos.length > 0 ? (
-          <Rover
-            title={roverData[0].camera.full_name}
-            imageUrl={roverData[0].img_src}
-            date={roverData[0].earth_date}
-            name={roverData[0].rover.name}
-            landing={roverData[0].rover.landing_date}
-            status={roverData[0].rover.status}
-          />
         ) : api === "option2" && roverData && roverData.photos.length === 0 ? (
           <p>No se encontraron los datos de la API</p>
         ) : (
-          <p></p>
+          api === "option2" &&
+          roverData && (
+            <Rover
+              title={roverData.photos[0].camera.full_name}
+              imageUrl={roverData.photos[0].img_src}
+              date={roverData.photos[0].earth_date}
+              name={roverData.photos[0].rover.name}
+              landing={roverData.photos[0].rover.landing_date}
+              status={roverData.photos[0].rover.status}
+            />
+          )
         )}
       </>
     </div>
